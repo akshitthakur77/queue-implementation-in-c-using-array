@@ -1,0 +1,59 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+	int front =0,rear=0,n;
+#define n 100
+int a[n];
+
+void enqueue(){
+ 
+	if(rear>=n){
+		printf("overflow");
+	}
+printf("Enter the elements :  ");
+scanf("%d",&a[rear]);
+rear++;
+
+}
+
+void dequeue(){
+	if(front>rear){
+		printf("underflow");
+		front==rear==0;
+	}
+	
+	else{
+	front++;
+}}
+void display(){
+	int i;
+	for(i=0; i<rear;i++){
+		printf("%d",a[rear]);
+	}
+	
+}
+
+
+int main() {
+
+
+	int z;
+while(z!=0){
+printf("enter the 1 for enqueue , 2 for dequeue , 3 for display and 0 for end  :   ");
+scanf("%d",&z);
+if(z==1)
+enqueue();
+if(z==2)
+deueue();
+if(z==3)
+display();
+if(z==0)
+break;
+}
+
+
+
+	return 0;
+}
